@@ -4,7 +4,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = componentTagger;
 const parser_1 = require("@babel/parser");
 const magic_string_1 = require("magic-string");
-const estree_walker_1 = require("estree-walker");
+// estree-walker v3 is ESM-only; avoid top-level require so build/runtime
+// environments that resolve CJS fail to load the package. We'll dynamically
+// import `walk` inside the loader function.
 const path = require("path");
 /* ───────────────────────────────────────────── Blacklists */
 const threeFiberElems = [
@@ -297,9 +299,9 @@ const extractLiteralValue = (node) => {
             return undefined;
     }
 };
-const findVariableDeclarations = (ast) => {
+const findVariableDeclarations = (ast, walk) => {
     const variables = new Map();
-    (0, estree_walker_1.walk)(ast, {
+    walk(ast, {
         enter(node) {
             var _a;
             // Handle const/let/var declarations
@@ -385,19 +387,35 @@ function componentTagger(src, map) {
         const ms = new magic_string_1.default(src);
         const rel = path.relative(process.cwd(), this.resourcePath);
         let mutated = false;
-        // Add parent references to AST nodes for upward traversal (non-enumerable to avoid infinite recursion)
-        (0, estree_walker_1.walk)(ast, {
-            enter(node, parent) {
-                if (parent && !Object.prototype.hasOwnProperty.call(node, 'parent')) {
-                    Object.defineProperty(node, 'parent', { value: parent, enumerable: false });
+            // Dynamically load `walk` from estree-walker (ESM-only in v3+).
+            const getWalk = async () => {
+                try {
+                    // Prefer CJS require when available
+                    // eslint-disable-next-line @typescript-eslint/no-var-requires
+                    const mod = require('estree-walker');
+                    return mod.walk;
                 }
-            }
-        });
+                catch (err) {
+                    // Fallback to dynamic ESM import
+                    const mod = await import('estree-walker');
+                    return mod.walk;
+                }
+            };
+            const walk = await getWalk();
+
+            // Add parent references to AST nodes for upward traversal (non-enumerable to avoid infinite recursion)
+            walk(ast, {
+                enter(node, parent) {
+                    if (parent && !Object.prototype.hasOwnProperty.call(node, 'parent')) {
+                        Object.defineProperty(node, 'parent', { value: parent, enumerable: false });
+                    }
+                }
+            });
         // 0️⃣ Collect variable declarations first
-        const variables = findVariableDeclarations(ast);
+        const variables = findVariableDeclarations(ast, walk);
         // 1️⃣ Gather local identifiers that reference `next/image`.
         const imageAliases = new Set();
-        (0, estree_walker_1.walk)(ast, {
+        walk(ast, {
             enter(node) {
                 if (node.type === 'ImportDeclaration' &&
                     node.source.value === 'next/image') {
@@ -408,7 +426,7 @@ function componentTagger(src, map) {
             },
         });
         // 2️⃣ Inject attributes with enhanced semantic context.
-        (0, estree_walker_1.walk)(ast, {
+        walk(ast, {
             enter(node) {
                 var _a;
                 if (node.type !== 'JSXOpeningElement')
