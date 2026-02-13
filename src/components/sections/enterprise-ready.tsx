@@ -4,30 +4,30 @@ import { Shield, Wallet, Database, Network } from 'lucide-react';
 
 const EnterpriseReady = () => {
   const features = [
-  {
-    title: "Economic Identity &\nAgent Budgets",
-    description: "Assign every AI agent a unique economic identity with enforceable budgets and spending limits. Control how much each agent can spend across LLMs, APIs, tools, and inter-agent workflows.",
-    icon: <Wallet className="w-6 h-6 text-[#cdff3e]" />,
-    bgimage: ""
-  },
-  {
-    title: "Real-Time Budget\nEnforcement",
-    description: "Enforce financial policies at runtime using gateways and sidecars. Agents cannot execute paid actions unless they pass budget checks and policy evaluation.",
-    icon: <Shield className="w-6 h-6 text-[#cdff3e]" />,
-    bgimage: ""
-  },
-  {
-    title: "Immutable Financial\nLedger",
-    description: "Record every economic action in an append-only, tamper-resistant ledger linking cost, intent, ownership, and outcome for audits and compliance.",
-    icon: <Database className="w-6 h-6 text-[#cdff3e]" />,
-    bgimage: ""
-  },
-  {
-    title: "Inter-Agent\nEconomic Control",
-    description: "Enable agents to delegate work with explicit budgets and constraints. All inter-agent transactions are metered, settled, and logged under governed economic rules.",
-    icon: <Network className="w-6 h-6 text-[#cdff3e]" />,
-    bgimage: ""
-  }
+    {
+      title: "Execution Authority &\nMandates",
+      description: "Cryptographically verifiable authority objects defining exactly what is allowed, by whom, and for how long.",
+      icon: <Wallet className="w-6 h-6 text-[#cdff3e]" />,
+      bgimage: ""
+    },
+    {
+      title: "Deterministic Runtime\nEnforcement",
+      description: "Deterministic enforcement at the moment of action. Automatically block unauthorized or expired executions.",
+      icon: <Shield className="w-6 h-6 text-[#cdff3e]" />,
+      bgimage: ""
+    },
+    {
+      title: "Immutable Authority\nLedger",
+      description: "The system of record for mandates, providing provable accountability for every automated action.",
+      icon: <Database className="w-6 h-6 text-[#cdff3e]" />,
+      bgimage: ""
+    },
+    {
+      title: "Explicit Delegation\nManagement",
+      description: "Treat delegation as a first-class primitive with bounded scope, duration, and end-to-end chain preservation.",
+      icon: <Network className="w-6 h-6 text-[#cdff3e]" />,
+      bgimage: ""
+    }
   ];
 
   return (
@@ -49,7 +49,7 @@ const EnterpriseReady = () => {
             </h2>
           </div>
           <p className="text-[#999999] font-sans text-lg desktop:text-xl max-w-[480px] leading-snug">
-            Trusted by e-commerce, fintech, trading, and cloud teams to prevent runaway costs and enforce governance.
+            Scale automation and agentic systems without scaling uncontrolled risk. Enforce the boundary of action.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ const EnterpriseReady = () => {
               {/* Card Background Image */}
               <div
                 className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 bg-cover bg-center grayscale mix-blend-overlay"
-                style={{ backgroundImage: `url(${feature.bgImage})` }}
+                style={{ backgroundImage: `url(${feature.bgimage})` }}
               />
 
               {/* Corner accent */}

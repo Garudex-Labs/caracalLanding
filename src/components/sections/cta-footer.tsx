@@ -15,19 +15,19 @@ const CTAFooter: React.FC = () => {
 
           <div className="flex flex-col gap-2 relative z-10">
             <h2 className="text-white font-mono text-2xl sm:text-4xl font-bold leading-tight uppercase tracking-tight">
-              Caracal OpenSource is now available
+              Caracal Core is open for developers
             </h2>
             <p className="text-[#999999] font-sans text-lg">
-              Install the latest version of Caracal directly from the Python Package Index.
+              Access the mandate protocol and core engine today.
             </p>
           </div>
           <a
-            href="https://pypi.org/project/caracal-core"
+            href="https://github.com/Garudex-Labs/caracal"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#cdff3e] text-[#0a0a0a] font-mono text-[14px] font-bold px-10 py-5 rounded-[2px] uppercase tracking-wider hover:shadow-[0px_0px_48px_0px_rgba(205,255,62,0.32)] transition-all duration-300 relative z-10"
           >
-            View on PyPI
+            View on GitHub
           </a>
         </div>
       </div>
@@ -36,17 +36,17 @@ const CTAFooter: React.FC = () => {
       <div className="w-full max-w-[1408px] mx-auto px-5 sm:px-12 desktop:px-20 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-x-12">
 
-          {/* Left Column: UNLOCK SECURE AI INFRASTRUCTURE */}
+          {/* Left Column: ENFORCE THE BOUNDARY OF ACTION */}
           <div className="md:col-span-6 flex flex-col gap-8">
             <div className="flex flex-col gap-10">
               <h1 className="text-white font-mono text-4xl sm:text-5xl font-bold leading-[1] uppercase tracking-tighter max-w-[500px]">
-                UNLOCK SECURE <br /> AI INFRASTRUCTURE
+                ENFORCE THE <br /> BOUNDARY OF ACTION
               </h1>
               <Link
-                href="/early-access"
+                href="/auth/login"
                 className="bg-[#cdff3e] text-[#0a0a0a] font-mono text-[14px] font-bold px-10 py-5 rounded-[2px] uppercase tracking-wider hover:shadow-[0px_0px_48px_0px_rgba(205,255,62,0.32)] transition-all duration-300 w-fit"
               >
-                GET EARLY ACCESS
+                GET STARTED
               </Link>
             </div>
           </div>

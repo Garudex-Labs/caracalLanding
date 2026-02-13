@@ -21,23 +21,23 @@ const HeroSection = () => {
           <h1 className="text-white uppercase font-mono text-[2.25rem] leading-[1.05] md:text-[3rem] desktop:text-[3.75rem] tracking-tight max-w-[900px]">
             Caracal
             <br className="hidden 2xl:block" />
-            Economic infrastructure
+            Pre-execution authority
             <br className="hidden 2xl:block" />
-            layer for AI agents
+            enforcement
           </h1>
 
           {/* Description Paragraph */}
           <p className="font-sans font-normal text-sm sm:text-base desktop:text-[17px] mt-6 max-w-[560px] text-[#999999] leading-relaxed">
-            Financial control for AI agents. Give every agent an identity, budget, and spending limits with full accountability and ROI tracking.
+            Execution authority enforcement for AI agents and automated software. Caracal ensures that no action executes without explicit, valid authority at the exact boundary where decisions turn into impact.
           </p>
 
           {/* Call to Action Link */}
           <div className="flex items-center mt-6 group">
             <a
-              href="/early-access"
+              href="/auth/login"
               className="flex items-center gap-2 text-[#cdff3e] font-mono font-bold text-[12px] tracking-widest uppercase hover:opacity-80 transition-all duration-300"
             >
-              GET EARLY ACCESS
+              GET STARTED
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>

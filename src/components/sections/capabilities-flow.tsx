@@ -12,10 +12,10 @@ const CapabilitiesFlow = () => {
           <div className="badge-orange mb-6">How It Works</div>
           <h2 className="font-mono text-[32px] md:text-[40px] leading-[1.1] max-w-3xl mb-6">
             THREE CORE PRIMITIVES FOR<br />
-            AGENT ECONOMIC CONTROL
+            EXECUTION AUTHORITY ENFORCEMENT
           </h2>
           <p className="text-[#999999] text-base md:text-lg max-w-2xl font-sans">
-            Identity, budgets, and logging — the foundation for accountable AI.
+            Caracal replaces implicit trust with explicit authority by issuing execution mandates.
           </p>
         </div>
 
@@ -30,10 +30,10 @@ const CapabilitiesFlow = () => {
                   <span className="font-mono text-lg md:text-xl font-bold leading-none py-1">1</span>
                   <div className="flex flex-col gap-6">
                     <h3 className="font-mono text-lg md:text-xl leading-tight">
-                      ECONOMIC IDENTITY FOR EVERY AGENT
+                      MACHINE-ENFORCEABLE POLICY
                     </h3>
                     <p className="text-[#999999] text-sm md:text-sm leading-relaxed max-w-md">
-                      Register agents with ownership and permissions. Meter every call. Turn invisible spending into auditable data.
+                      Structured rules defining when and how authority is issued and validated relative to specific environments and resources.
                     </p>
                   </div>
                 </div>
@@ -63,10 +63,10 @@ const CapabilitiesFlow = () => {
                   <span className="font-mono text-lg md:text-xl font-bold leading-none py-1">2</span>
                   <div className="flex flex-col gap-6">
                     <h3 className="font-mono text-lg md:text-xl leading-tight">
-                      BUDGET ENFORCEMENT AND POLICY CONTROL
+                      EXPLICIT DELEGATION
                     </h3>
                     <p className="text-[#999999] text-sm md:text-sm leading-relaxed max-w-md">
-                      Set spending limits, access rules, and block conditions. Every action logged to an immutable ledger.
+                      Bounded grants with defined scope, duration, and end-to-end chain preservation to prove exactly who authorized an action.
                     </p>
                   </div>
                 </div>
@@ -93,10 +93,10 @@ const CapabilitiesFlow = () => {
                   <span className="font-mono text-lg md:text-xl font-bold leading-none py-1">3</span>
                   <div className="flex flex-col gap-6">
                     <h3 className="font-mono text-lg md:text-xl leading-tight">
-                      INTER-AGENT ECONOMICS
+                      MULTI-AGENT AUTHORITY
                     </h3>
                     <p className="text-[#999999] text-sm md:text-sm leading-relaxed max-w-md">
-                      Agents delegate work, allocate budgets, and transact — creating internal markets with real financial constraints.
+                      Enforced constraints across agent interactions to prevent privilege expansion and ensure authority is preserved during handoffs.
                     </p>
                   </div>
                 </div>

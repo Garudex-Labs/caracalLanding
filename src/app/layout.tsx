@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
+import { Toaster } from "@/components/ui/sonner";
+import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "Caracal",
@@ -19,9 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <ErrorReporter />
-        {children}
-        <VisualEditsMessenger />
+        <Providers>
+          <ErrorReporter />
+          {children}
+          <Toaster />
+          <VisualEditsMessenger />
+        </Providers>
       </body>
     </html>
   );

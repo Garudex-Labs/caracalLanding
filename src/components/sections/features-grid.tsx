@@ -3,40 +3,40 @@ import React from 'react';
 const FeaturesGrid = () => {
   const features = [
     {
-      title: "Dynamic access tokens",
-      description: "No static secrets. Every agent action runs on ephemeral, identity-attested credentials that can be revoked instantly. Real-time, fine-grained access control verified at the edge keeps agents contained and accountable.",
+      title: "Deterministic Enforcement",
+      description: "Verify authority at execution time. Automatically block unauthorized, expired, or out-of-scope actions before they occur.",
       imageUrl: "/revoke.jpg",
-      alt: "Dynamic access tokens illustration"
+      alt: "Deterministic Enforcement illustration"
     },
     {
-      title: "Federated Identity with Distributed Authorization",
-      description: "Integrate seamlessly with your existing identity stack. Caracal unifies users, agents, and external systems, ensuring authorization happens at the edge where agents interact with their environment.",
+      title: "Intent-Constrained Authority",
+      description: "Narrow authority scope using execution context. Default to minimum required trust when intent is missing or ambiguous.",
       imageUrl: "/federated.jpg",
-      alt: "Federated Identity illustration"
+      alt: "Intent-Constrained Authority illustration"
     },
     {
-      title: "Agent-Native Data Model",
-      description: "Map workloads, applications, users, and resources into logical, ephemeral zones for out-of-the-box access management. Spin zones up, down, or away as needed, perfect for dynamic, agent-native workloads that integrate directly into your software development lifecycle.",
+      title: "Immutable Authority Ledger",
+      description: "The system of record for mandates. Cryptographically verifiable proof of delegation and execution for precise accountability.",
       imageUrl: "/native.jpg",
-      alt: "Agent-Native Data Model illustration"
+      alt: "Immutable Authority Ledger illustration"
     },
     {
-      title: "SDKs for Developers",
-      description: "Drop-in SDKs give developers everything they need to integrate identity, enforce access, and connect to tools securely. Empower creators to build production-ready agentic applications without touching IAM plumbing.",
+      title: "Stable Integration",
+      description: "Integrate through clear boundaries. System-handled mandates ensure your application logic stays clean and focused.",
       imageUrl: "/sdk.jpg",
-      alt: "SDKs for Developers illustration"
+      alt: "Stable Integration illustration"
     },
     {
-      title: "Centralized Policy and Auditing",
-      description: "Govern agents and tools at scale while empowering users to control what agents can do on their behalf. Deterministic, task-based policies define every action, with end-to-end auditing and transparency for full accountability.",
+      title: "Full System Coverage",
+      description: "Complete authority coverage across identity, runtime enforcement, and policy evaluation for both single and multi-agent systems.",
       imageUrl: "/policy.jpg",
-      alt: "Centralized Policy and Auditing illustration"
+      alt: "Full System Coverage illustration"
     },
     {
-      title: "Ecosystem Interoperability",
-      description: "Unify identity, permissions, and compliance across MCP, OAuth, and emerging standards. Connect securely to any agent, tool, or service through our integrations gateway or plugin with full in-band authorization and auditing.",
+      title: "Execution Authority Layer",
+      description: "Scale automation without scaling uncontrolled risk. Ensure every action is authorized, time-bounded, and provable.",
       imageUrl: "/ecosystem.jpg",
-      alt: "Ecosystem Interoperability illustration"
+      alt: "Execution Authority Layer illustration"
     }
   ];
 

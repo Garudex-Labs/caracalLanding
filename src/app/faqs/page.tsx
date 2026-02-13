@@ -6,7 +6,7 @@ export default function FAQsPage() {
   const faqs = [
     {
       "q": "WHAT IS CARACAL?",
-      "a": "Caracal is an economic infrastructure layer for AI agents that enforces budgets, tracks spending, and records all economic actions across LLMs, APIs, tools, and inter-agent workflows."
+      "a": "A pre-execution authority enforcement system for AI agents and automated software. Caracal ensures that no action executes without explicit, valid authority at the exact moment of execution."
     },
     {
       "q": "IS CARACAL OPEN SOURCE?",
@@ -26,7 +26,7 @@ export default function FAQsPage() {
     <div className="flex flex-col min-h-screen bg-[#0a0a0a]">
       <Navbar />
       <main className="flex-grow pt-10">
-        <SubpageHero 
+        <SubpageHero
           badge="SUPPORT"
           title="FAQs"
           subtitle="Everything you need to know about Caracal and the future of agentic ai."
@@ -34,12 +34,12 @@ export default function FAQsPage() {
         <section className="py-24">
           <div className="container max-w-[1408px] mx-auto px-5 sm:px-12 desktop:px-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {faqs.map((faq, i) => (
-            <div key={i} className="border border-[#1a1a1a] p-8 hover:border-[#cdff3e]/20 transition-colors bg-[#0a0a0a]">
-            <h3 className="text-white font-mono text-base sm:text-lg font-bold uppercase mb-4">{faq.q}</h3>
-            <p className="text-[#999999] font-sans text-sm sm:text-base leading-relaxed opacity-80">{faq.a}</p>
-            </div>
-            ))}
+              {faqs.map((faq, i) => (
+                <div key={i} className="border border-[#1a1a1a] p-8 hover:border-[#cdff3e]/20 transition-colors bg-[#0a0a0a]">
+                  <h3 className="text-white font-mono text-base sm:text-lg font-bold uppercase mb-4">{faq.q}</h3>
+                  <p className="text-[#999999] font-sans text-sm sm:text-base leading-relaxed opacity-80">{faq.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

@@ -4,33 +4,33 @@ import CTAFooter from "@/components/sections/cta-footer";
 
 export default function PressPage() {
   const news = [
-  {
-    date: "JAN 28, 2026",
-    source: "Company Update",
-    title: "Caracal goes open source for transparency",
-  },
-  {
-    date: "FEB 1, 2026",
-    source: "Product Release",
-    title: "ASE (Agent Settlement Extension) released on PyPI",
-  },
-  {
-    date: "FEB 2, 2026",
-    source: "Product Release",
-    title: "Caracal v0.1.0 open source released on PyPI",
-  },
+    {
+      date: "JAN 28, 2026",
+      source: "Company Update",
+      title: "Caracal pivot to execution authority enforcement",
+    },
+    {
+      date: "FEB 1, 2026",
+      source: "Product Release",
+      title: "Mandate protocol specification released",
+    },
+    {
+      date: "FEB 2, 2026",
+      source: "Product Release",
+      title: "Caracal core engine v0.1.0 released",
+    },
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0a0a0a]">
       <Navbar />
       <main className="flex-grow pt-10">
-        <SubpageHero 
+        <SubpageHero
           badge="RESOURCES"
           title="PRESS & MEDIA KIT"
           subtitle="Latest news, brand assets, and contact information for media inquiries."
         />
-        
+
         <section className="py-24 border-b border-[#1a1a1a]">
           <div className="container max-w-[1408px] mx-auto px-5 sm:px-12 desktop:px-20">
             <h2 className="text-[#333333] font-mono text-[10px] uppercase font-bold tracking-[0.2em] mb-12">LATEST NEWS</h2>
@@ -54,9 +54,9 @@ export default function PressPage() {
               <div className="flex flex-col gap-4">
                 <h2 className="text-white text-3xl font-mono uppercase font-bold">BRAND ASSETS</h2>
                 <p className="text-[#999999] font-sans max-w-xl">
-                  Download our official logos, brand guidelines, and executive headshots.
+                  Official Caracal brand assets for media coverage of execution authority enforcement.
                 </p>
-              </div>  
+              </div>
               <a
                 href="/media-kit.zip"
                 download

@@ -18,45 +18,44 @@ const MissionSection: React.FC = () => {
             </div>
 
             <h2 className="text-white font-mono text-4xl sm:text-5xl lg:text-[50px] font-bold uppercase tracking-tight leading-[0.95] mb-10">
-              THE MISSING LAYER <br />
-              FOR AGENT ECONOMIC <br />
-              CONTROL
+              EXECUTION AUTHORITY <br />
+              BY DESIGN
             </h2>
 
-            <p className="text-[#999999] font-sans text-lg lg:text-2xl max-w-[600px] leading-snug mb-12">
-              AI agents trigger real economic actions API calls, compute, ad spend, trading but companies can't attribute costs, enforce budgets, or explain outcomes.
+            <p className="text-[#999999] font-sans text-lg lg:text-xl max-w-[600px] leading-snug mb-12">
+              Traditional identity systems rely on implicit trust and long-lived permissions. This model breaks down for dynamic AI agents that delegate work and coordinate across systems.
             </p>
 
             <div className="flex flex-col gap-8 border-l-2 border-[#ff4f03] pl-8 py-2 relative">
               <div className="absolute top-0 left-[-2px] w-[2px] h-4 bg-[#ff4f03]" />
               <div className="absolute bottom-0 left-[-2px] w-[2px] h-4 bg-[#ff4f03]" />
               <p className="text-white/60 font-sans text-base leading-relaxed max-w-[450px]">
-                Caracal sits between agents and paid resources the system of record for automated spending.
+                Caracal replaces implicit trust with explicit, cryptographically verifiable <span className="font-bold text-white">execution mandates</span> that define exactly what is allowed, for how long, and by whom.
               </p>
             </div>
           </div>
 
 
-            {/* Right: Illustration */}
-            <div className="flex-1 flex justify-center items-start">
+          {/* Right: Illustration */}
+          <div className="flex-1 flex justify-center items-start">
             <div className="relative inline-block">
               {/* Decorative elements behind image */}
               <div className="absolute inset-0 -z-10 bg-black rounded-full blur-3xl opacity-30" />
 
               <div className="relative inline-block border border-[#1a1a1a] bg-black p-4">
-              {/* Top left corner accent */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#ff4f03]" />
-              {/* Bottom right corner accent */}
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#ff4f03]" />
+                {/* Top left corner accent */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#ff4f03]" />
+                {/* Bottom right corner accent */}
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#ff4f03]" />
 
-              <img
-                src="home_showcase.jpg"
-                alt="Infrastructure nodes"
-                className="block max-w-full h-auto"
-              />
+                <img
+                  src="home_showcase.jpg"
+                  alt="Infrastructure nodes"
+                  className="block max-w-full h-auto"
+                />
               </div>
             </div>
-            </div>
+          </div>
         </div>
 
         {/* Section Divider */}

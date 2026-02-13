@@ -26,7 +26,7 @@ const Navbar = () => {
         rel="noopener noreferrer"
           >
         <span className="text-black group-hover:underline font-mono text-[10px] sm:text-[12px] font-bold text-center uppercase tracking-tight">
-          Open-source Caracal, built with community to make AI agents financially intelligent
+          Open-source Caracal, built with community to make AI agents intelligent
         </span>
         <svg
           className="stroke-black transition-transform group-hover:translate-x-1"
@@ -102,12 +102,14 @@ const Navbar = () => {
                     </Link>
                   </div>
                 
-                  <Link
-                    href="/early-access"
+                  <a
+                    href="https://cal.com/rawx18/caracal-enterprise-sales"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-[#cdff3e] text-[#0a0a0a] font-mono text-[12px] font-bold px-8 py-4 rounded-[2px] uppercase tracking-wider hover:shadow-[0px_0px_48px_0px_rgba(205,255,62,0.32)] transition-all duration-300"
                   >
-                    GET EARLY ACCESS
-                  </Link>
+                    CONTACT SALES
+                  </a>
               </div>
 
               {/* Mobile Menu Button */}
